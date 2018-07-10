@@ -1,0 +1,359 @@
+int button1 = 2;
+int button2 = 3;
+int button3 = 5;
+int button4 = 7;
+int button5 = 11;
+int button6 = 13;
+int buttoncheck = 8;
+int LED = 4;
+int LED2 = 9;
+
+int buttonstate1 = 0;
+int buttonstate2 = 0;
+int buttonstate3 = 0;
+int buttonstate4 = 0;
+int buttonstate5 = 0;
+int buttonstate6 = 0;
+int buttonstatecheck = 0;
+int value = 1;
+
+
+
+void setup(){
+  Serial.begin(9600);
+pinMode(LED,OUTPUT);
+pinMode(LED, OUTPUT);
+pinMode(button1,INPUT);
+pinMode(button2,INPUT);
+pinMode(button3,INPUT);
+pinMode(button4,INPUT);
+pinMode(button5,INPUT);
+pinMode(button6,INPUT);
+pinMode(buttoncheck, INPUT);
+
+ 
+   
+}
+
+void loop(){
+  buttonstate1 = digitalRead(button1);
+  buttonstate2 = digitalRead(button2);
+  buttonstate3 = digitalRead(button3);
+  buttonstate4 = digitalRead(button4);
+  buttonstate5 = digitalRead(button5);
+  buttonstate6 = digitalRead(button6);
+  buttonstatecheck = digitalRead(buttoncheck);
+ 
+
+  if (buttonstate1 == HIGH){
+    delay(500);
+   mult(2);   
+  }
+
+  else if (buttonstate2 == HIGH){
+   delay(500);
+     mult(3);
+ 
+  }
+
+   else if (buttonstate3 == HIGH){
+    delay(500);
+     mult(5);
+     
+  }
+
+   else if (buttonstate4 == HIGH){
+    delay(500);
+      mult(7);
+   
+  }
+
+   else if (buttonstate5 == HIGH){
+    delay(500);
+       mult(11);
+    
+   
+  }
+
+   else if (buttonstate6 == HIGH){
+    delay(500);
+       mult(13);
+   
+  }
+
+ else if (buttonstatecheck == HIGH)
+  {
+    delay(500);
+int   letter = valuecheck(value);
+      
+   
+
+     if (letter == 109) {
+      digitalWrite(LED, HIGH);
+      delay(1000);
+      digitalWrite(LED, LOW);
+      value = 1;}
+
+      value = 1;
+
+    
+
+   
+    
+
+}
+}
+
+
+int mult(int button){
+
+  if (button == 1){
+      int p = valuecheck(value);
+      return p;
+   }
+  else if (button != 1) {
+    
+    value = value * button;
+    return value;
+    }
+} 
+
+int valuecheck(int ans)
+{
+    switch (ans){
+      case 2:
+        Serial.println("2");
+        return 2;
+        break;
+        
+      case 6:
+        
+        Serial.println("6");
+        return 6;
+        break;
+
+      case 10:
+        Serial.println("10");
+        return 10;
+        break;
+
+      case 14:
+        Serial.println("14");
+        return 14;
+        break;
+
+      case 15:
+        Serial.println("15");
+        return 15;
+        break;
+
+      case 21:
+        Serial.println("21");
+        return 21;
+        break;
+
+      case 22:
+        Serial.println("22");
+        return 22;
+        break;
+
+      case 26:
+        Serial.println("26");
+        return 26;
+        break;
+
+      case 33:
+        Serial.println("33");
+        return 33;
+        break;
+
+      case 35:
+        Serial.println("35");      
+        return 35;
+        break;
+
+      case 39:
+        Serial.println("39");
+        return 39;
+        break;
+
+      case 42:
+        Serial.println("42");
+        return 42;
+        break;
+
+      case 66:
+        Serial.println("66");
+        return 66;
+        break;
+
+      case 70:
+        Serial.println("70");
+        return 70;
+        break;
+
+      case 77:
+        Serial.println("77");
+        return 77;
+        break;
+
+      case 78:
+        Serial.println("78");
+        return 78;
+        break;
+
+      case 105:
+        Serial.println("105");
+        return 105;
+        break;
+
+      case 110:
+        Serial.println("110");
+        return 110;
+        break;
+
+      case 130:
+        Serial.println("130");
+        return 130;
+        break;
+
+      case 154:
+        Serial.println("154");
+        return 154;
+        break;
+
+      case 165:
+        Serial.println("165");
+        return 165;
+        break;
+
+      case 182:
+        Serial.println("182");
+        return 182;
+        break;
+
+      case 195:
+        Serial.println("195");
+        return 195;
+        break;
+
+      case 210:
+        Serial.println("210");
+        return 210;
+        break;
+
+      case 231:
+        Serial.println("231");
+        return 231;
+        break;
+
+      case 286:
+        Serial.println("286");
+        return 286;
+        break;
+
+      case 310:
+        Serial.println("310");
+        return 310;
+        break;
+
+      case 385:
+        Serial.println("385");
+        return 385;
+        break;
+
+      case 390:
+        Serial.println("390");
+        return 390;
+        break;
+
+      case 429:
+        Serial.println("429");
+        return 429;
+        break;
+
+      case 462:
+        Serial.println("462");
+        return 462;
+        break;
+
+      case 546:
+        Serial.println("546");
+        return 546;
+        break;
+
+      case 770:
+        Serial.println("770");
+        return 770;
+        break;
+
+      case 910:
+        Serial.println("910");
+        return 910;
+        break;
+
+      case 1001:
+        Serial.println("1001");
+        return 1001;
+        break;
+
+      case 1155:
+        Serial.println("1155");
+        return 1155;
+        break;
+
+      case 1365:
+        Serial.println("1365");
+        return 1365;
+        break;
+
+      case 1430:
+        Serial.println("1430");
+        return 1430;
+        break;
+
+      case 2145:
+        Serial.println("2145");
+        return 2145;
+        break;
+
+      case 2310:
+        Serial.println("2310");
+        return 2310;
+        break;
+
+      case 3003:
+        Serial.println("3003");
+        return 3003;
+        break;
+
+      case 4290:
+        Serial.println("4290");
+        return 4290;
+        break;
+
+      case 6006:
+        Serial.println("6006");
+        return 6006;
+        break;
+
+      case 15015:
+        Serial.println("15015");
+        return 15015;
+        break;
+
+      case 30020:
+        Serial.println("30020");
+        return 30020;
+        break;
+
+
+      
+      default:
+        Serial.println("000");
+        return 109;
+        break;
+      
+      }
+    
+}
